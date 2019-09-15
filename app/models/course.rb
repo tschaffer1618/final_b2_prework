@@ -8,5 +8,6 @@ class Course < ApplicationRecord
     students.joins(:student_courses)
             .select("students.name, student_courses.grade")
             .order("student_courses.grade desc")
+            .distinct
   end
 end
