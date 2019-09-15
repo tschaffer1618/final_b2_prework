@@ -1,0 +1,7 @@
+<center>
+  <h1><%= @course.name %></h1>
+  <br>
+  <% @course.sort_students_by_grade.each do |row| %>
+      <h3><%= row.name %>-<%= row.grade %>%</h3>
+  <% end %>
+</center>
